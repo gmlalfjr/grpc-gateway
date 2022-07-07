@@ -16,6 +16,11 @@ service Timeline {
   }
 }
 
+message TimelineRequest {
+  string postText = 1;
+  string isPrivate = 2;
+}
+
 message TimelineResponse {
   string status = 1;
   string message = 2;
