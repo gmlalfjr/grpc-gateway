@@ -14,8 +14,19 @@ service Timeline {
           body: "*"
         };
   }
+  rpc GetTimelinebyId(GetTimelineRequest) returns (GetTimelineResponse) {
+    option(google.api.http) = {
+      get: "/grpc/timeline/{id}"
+    };
+  }
+}
+message GetTimelineRequest {
+  int32 id = 1;
 }
 
+message GetTimelineResponse {
+  int32 id = 1;
+}
 message TimelineRequest {
   string postText = 1;
   string isPrivate = 2;
