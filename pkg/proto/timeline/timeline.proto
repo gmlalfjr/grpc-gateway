@@ -10,7 +10,7 @@ import "google/api/annotations.proto";
 service Timeline {
   rpc CreateTimeline(TimelineRequest) returns (TimelineResponse){
     option(google.api.http) = {
-          post: "/v1/timeline"
+          post: "/grpc/timeline"
           body: "*"
         };
   }
